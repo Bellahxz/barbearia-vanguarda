@@ -96,7 +96,7 @@ export class ServiçOsSection extends LitElement {
 
         <aside>
           <article>
-            <app-paragrafo>COrte</app-paragrafo>
+            <app-paragrafo>Corte</app-paragrafo>
             <app-paragrafo class="descricao">
             Social,degradê, surfista, militar, razor part, undercut.
             </app-paragrafo>
