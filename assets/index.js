@@ -5,12 +5,14 @@ export * from './components/quadro'
 export * from './components/paragrafo'
 export * from './components/botao'
 export * from './components/bolinhas'
+export * from './components/mapa'
 
 // Seções
 export * from './Sections/hero-section'
 export * from './Sections/a-barbearia-section'
 export * from './Sections/servicos-section'
 export * from './Sections/contatos-section'
+export * from './Sections/unidades-section'
 
 // Páginas
 export * from './pages/home-page'
