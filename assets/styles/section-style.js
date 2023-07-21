@@ -18,7 +18,9 @@ export const section = css`
   }
 
   button:hover,
-  button:active {
+  button:active,
+  a:hover,
+  a:active {
     background-color: color-mix(
       in srgb,
       white 15%,
