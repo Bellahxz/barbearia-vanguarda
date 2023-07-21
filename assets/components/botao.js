@@ -7,10 +7,12 @@ export class Botao extends LitElement {
         display: block;
       }
 
-      ::slotted(button), button, ::slotted(a) {
+      ::slotted(button),
+      ::slotted(a),
+      button {
         width: inherit;
 
-        display: inline-flex;
+        display: flex;
         padding: 5px 24px;
         border: 0;
         justify-content: flex-start;
@@ -44,9 +46,7 @@ export class Botao extends LitElement {
   ];
 
   render() {
-    return html` 
-    <slot><button>Pressione</button></slot> 
-    `;
+    return html` <slot><button>Pressione</button></slot> `;
   }
 }
 customElements.define("app-botao", Botao);
