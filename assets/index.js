@@ -15,6 +15,4 @@ export * from './Sections/a-barbearia-section'
 export * from './Sections/servicos-section'
 export * from './Sections/contatos-section'
 export * from './Sections/unidades-section'
-
-// Páginas
-export * from './pages/home-page'
+export * from './Sections/menu-section'
