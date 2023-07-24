@@ -64,6 +64,14 @@ export class ABarbeariaSection extends LitElement {
 
         --cor-bolinhas: var(--tom-3);
       }
+
+      img {
+        width: 100%;
+      }
+
+      app-botao {
+        display: var(--display-botao);
+      }
     `,
   ];
 
