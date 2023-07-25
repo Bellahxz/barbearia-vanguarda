@@ -52,7 +52,7 @@ export class ContatosSection extends LitElement {
       <app-titulo>Entre em contato conosco</app-titulo>
 
       <app-quadro>
-        <img src="contatos-1.png" alt="Imagem contatos" />
+        <img loading="lazy" src="contatos-1.png" alt="Imagem contatos" />
       </app-quadro>
 
       <div>
