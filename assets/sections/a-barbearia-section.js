@@ -72,6 +72,48 @@ export class ABarbeariaSection extends LitElement {
       app-botao {
         display: var(--display-botao);
       }
+
+      @media (min-width: 768px) {
+      app-quadro {
+        width: 600px;
+        height: 600px;
+
+        right: -182px;
+        top: 200px;
+      }
+
+      app-bolinhas {
+        width: 400px;
+        height: 400px;
+
+        left: -20px;
+        top: 272px;
+      }
+
+      app-paragrafo {
+        width: 100%;
+      }
+
+      article {
+        width: 60%;
+      }
+
+      }
+
+      @media (min-width: 1028px) {
+      app-quadro {
+        top: 100px;
+      }
+
+      app-bolinhas {
+        top: 112px;
+      }
+
+      article {
+        width: 70%;
+      }
+
+      }
     `,
   ];
 

@@ -9,7 +9,7 @@ export class HeroSection extends LitElement {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 1rem;
+        gap: .5rem;
       }
 
       span {
@@ -28,6 +28,7 @@ export class HeroSection extends LitElement {
       app-logo {
         width:160px;
         height:160px;
+        opacity: 0.75%;
         
         position: absolute;
         right: -72px;
@@ -41,6 +42,17 @@ export class HeroSection extends LitElement {
       app-paragrafo {
         font-size: 1.25rem;
       }
+
+      @media (min-width: 1024px) {
+        app-paragrafo {
+          display: none;
+        }
+
+        app-logo {
+          width: 220px;
+          height: 220px;
+        }
+      }
     `,
   ];
 
@@ -48,7 +60,7 @@ export class HeroSection extends LitElement {
     return html`
       <section>
         <app-titulo>
-          <h1>Barbearia <span>Vanguarda</span></h1>
+          <h1>Barbearia <br> <span>Vanguarda</span></h1>
           <app-logo></app-logo>
         </app-titulo>
         <app-quadro>
