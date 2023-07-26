@@ -6,8 +6,8 @@ export class HomePage extends LitElement {
         <hero-section></hero-section>
         <a-barbearia-section></a-barbearia-section>
         <servicos-section></servicos-section>
-        <contatos-section></contatos-section>
-        <unidades-section></unidades-section>
+        <contatos-section id="contatos"></contatos-section>
+        <unidades-section id="unidades"></unidades-section>
         `;
     }
 }
