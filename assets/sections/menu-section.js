@@ -110,8 +110,8 @@ export class Menu extends LitElement {
       <nav>
         <button @click=${this.rolarUnidades}>Unidades <feather-icon icon="map-pin"></feather-icon></button>
         <button @click=${this.rolarContato}>Contatos <feather-icon icon="phone"></feather-icon></button>
-        <a href="servicos"> Serviços <feather-icon icon="scissors"></feather-icon> </a>
-        <a href="a-barbearia">
+        <a @click=${nav.fechar} href="servicos"> Serviços <feather-icon icon="scissors"></feather-icon> </a>
+        <a @click=${nav.fechar} href="a-barbearia">
           A Barbearia
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 28">
             <path
@@ -122,7 +122,7 @@ export class Menu extends LitElement {
             />
           </svg>
         </a>
-        <a href="/">Home <feather-icon icon="home"></feather-icon></a>
+        <a @click=${nav.fechar} href="/">Home <feather-icon icon="home"></feather-icon></a>
 
         <button @click=${nav.fechar}>
           <feather-icon icon="x"> </feather-icon>

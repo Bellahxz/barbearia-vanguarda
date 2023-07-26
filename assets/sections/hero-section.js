@@ -9,7 +9,7 @@ export class HeroSection extends LitElement {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: .5rem;
+        gap: 0.5rem;
       }
 
       span {
@@ -26,27 +26,33 @@ export class HeroSection extends LitElement {
       }
 
       app-logo {
-        width:160px;
-        height:160px;
+        width: 160px;
+        height: 160px;
         opacity: 0.75%;
-        
+
         position: absolute;
         right: -72px;
         top: -39px;
+        z-index: 10;
       }
 
       img {
-        height: 100% ;
+        height: 100%;
       }
 
       app-paragrafo {
         font-size: 1.25rem;
       }
 
+      swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
       @media (min-width: 768px) {
         app-logo {
-        width: 220px;
-        height: 220px;
+          width: 220px;
+          height: 220px;
         }
       }
 
@@ -67,15 +73,30 @@ export class HeroSection extends LitElement {
     return html`
       <section>
         <app-titulo>
-          <h1>Barbearia <br> <span>Vanguarda</span></h1>
+          <h1>
+            Barbearia <br />
+            <span>Vanguarda</span>
+          </h1>
           <app-logo></app-logo>
         </app-titulo>
         <app-quadro>
-          <img loading="lazy" src="slider-1.png" alt="Imagem slider 1"/>
+          <swiper-container loop="true">
+            <swiper-slide>
+              <img loading="lazy" src="slider-1.png" alt="Imagem slider 1" />
+            </swiper-slide>
+
+            <swiper-slide>
+              <img loading="lazy" src="slider-2.jpg" alt="Imagem slider 2" />
+            </swiper-slide>
+
+            <swiper-slide>
+              <img loading="lazy" src="slider-3.jpg" alt="Imagem slider 3" />
+            </swiper-slide>
+          </swiper-container>
         </app-quadro>
       </section>
       <app-paragrafo>
-          Obtenha um estilo impecável, do cabelo à barba.
+        Obtenha um estilo impecável, do cabelo à barba.
       </app-paragrafo>
     `;
   }
