@@ -5,7 +5,8 @@
   },
   "dependencies": {
     "@vaadin/router": "^1.7.5",
-    "lit": "^2.7.6"
+    "lit": "^2.7.6",
+    "swiper": "^10.0.4"
   },
   "devDependencies": {
     "@types/node": "^20.4.0",
