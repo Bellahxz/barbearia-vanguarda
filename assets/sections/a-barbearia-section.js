@@ -32,11 +32,10 @@ export class ABarbeariaSection extends LitElement {
       }
 
       app-paragrafo {
-        
-        width:270px;
+        width: 270px;
         text-align: justify;
         line-height: 140%; /* 22.4px */
-        letter-spacing: -1.60px;
+        letter-spacing: -1.6px;
       }
 
       app-quadro {
@@ -57,7 +56,7 @@ export class ABarbeariaSection extends LitElement {
         align-items: flex-start;
         gap: 10px;
 
-        position:absolute;
+        position: absolute;
         left: -150px;
         top: 72px;
         z-index: -20;
@@ -74,45 +73,48 @@ export class ABarbeariaSection extends LitElement {
       }
 
       @media (min-width: 768px) {
-      app-quadro {
-        width: 600px;
-        height: 600px;
+        app-quadro {
+          width: 600px;
+          height: 600px;
 
-        right: -182px;
-        top: 200px;
-      }
+          right: -182px;
+          top: 200px;
+        }
 
-      app-bolinhas {
-        width: 400px;
-        height: 400px;
+        app-bolinhas {
+          width: 400px;
+          height: 400px;
 
-        left: -20px;
-        top: 272px;
-      }
+          left: -20px;
+          top: 272px;
+        }
 
-      app-paragrafo {
-        width: 100%;
-      }
+        app-paragrafo {
+          width: 100%;
+        }
 
-      article {
-        width: 60%;
-      }
-
+        article {
+          width: 60%;
+        }
       }
 
       @media (min-width: 1028px) {
-      app-quadro {
-        top: 100px;
-      }
+        app-quadro {
+          top: 100px;
+        }
 
-      app-bolinhas {
-        top: 112px;
-      }
+        app-bolinhas {
+          top: 112px;
+        }
 
-      article {
-        width: 70%;
-      }
-
+        article {
+          width: 70%;
+          border-image-source: linear-gradient(
+            20deg,
+            rgba(102, 78, 56, 0) 50%,
+            rgba(102, 78, 56, 1) 100%
+          );
+        }
       }
     `,
   ];
@@ -121,7 +123,11 @@ export class ABarbeariaSection extends LitElement {
     return html` <app-titulo>A Barbearia</app-titulo>
       <app-bolinhas> </app-bolinhas>
       <app-quadro>
-        <img loading="lazy" src="imagem-a-barbearia.png" alt="Imagem a Barbearia">
+        <img
+          loading="lazy"
+          src="imagem-a-barbearia.png"
+          alt="Imagem a Barbearia"
+        />
       </app-quadro>
       <article>
         <app-paragrafo>

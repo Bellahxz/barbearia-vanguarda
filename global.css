@@ -11,6 +11,11 @@
     --fonte-corpo: 'Source Serif 4' , sans-serif;
 }
 
+html {
+    width: 100vw;
+    overflow-x: hidden ;
+}
+
 body {
     width: 100%; 
     max-width: 1024px;
@@ -19,5 +24,5 @@ body {
 }
 
 .escondido{
-    top: -96px;
+    top: -176px;
 }
