@@ -36,6 +36,10 @@ export class HeroSection extends LitElement {
         z-index: 10;
       }
 
+      app-quadro {
+        background-color: transparent;
+      }
+
       img {
         height: 100%;
       }
@@ -80,7 +84,20 @@ export class HeroSection extends LitElement {
           <app-logo></app-logo>
         </app-titulo>
         <app-quadro>
-          <swiper-container loop="true">
+          <swiper-container
+            loop="true"
+            autoplay="true"
+            disabe-on-interaction="false"
+            speed="5000"
+            effect="coverflow"
+            simulate-touch="false"
+            centered-slides="true"
+            coverflow-effect-rotate="50"
+            coverflow-effect-stretch="0"
+            coverflow-effect-depth="100"
+            coverflow-effect-modifier="1"
+            coverflow-effect-slide-shadows="true"
+          >
             <swiper-slide>
               <img loading="lazy" src="slider-1.png" alt="Imagem slider 1" />
             </swiper-slide>

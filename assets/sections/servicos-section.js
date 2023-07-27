@@ -5,10 +5,10 @@ export class ServiçOsSection extends LitElement {
   static styles = [
     section,
     css`
-      :host{
+      :host {
         padding: 2rem 0;
       }
-      
+
       app-bolinhas {
         width: 270px;
         height: 23px;
@@ -67,11 +67,11 @@ export class ServiçOsSection extends LitElement {
 
       .descricao {
         width: 108px;
-        height: .875rem;
+        height: 0.875rem;
       }
 
       img {
-        height:120%;
+        height: 100%;
       }
 
       app-quadro {
@@ -79,6 +79,17 @@ export class ServiçOsSection extends LitElement {
         height: 320px;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+      }
+
+      swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       @media (min-width: 768px) {
@@ -102,7 +113,7 @@ export class ServiçOsSection extends LitElement {
         }
 
         article app-paragrafo:first-child {
-          font-size: 1.25rem ;
+          font-size: 1.25rem;
         }
 
         .descricao {
@@ -132,14 +143,43 @@ export class ServiçOsSection extends LitElement {
 
       <section>
         <app-quadro>
-        <img loading="lazy" src= "servicos-1.jpg" alt= "Imagem Serviços" />  
+          <swiper-container
+            effect="fade"
+            loop="true"
+            autoplay="true"
+            speed="750"
+            simulate-touch="false"
+            disabe-on-interaction="false"
+          >
+            <swiper-slide>
+              <img
+                loading="lazy"
+                src="servicos-1.jpg"
+                alt="Imagem Serviços 1"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                loading="lazy"
+                src="servicos-2.jpg"
+                alt="Imagem Serviços 2"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                loading="lazy"
+                src="servicos-3.jpg"
+                alt="Imagem Serviços 3"
+              />
+            </swiper-slide>
+          </swiper-container>
         </app-quadro>
 
         <aside>
           <article>
             <app-paragrafo>Corte</app-paragrafo>
             <app-paragrafo class="descricao">
-            Social,degradê, surfista, militar, razor part, undercut.
+              Social,degradê, surfista, militar, razor part, undercut.
             </app-paragrafo>
           </article>
 
