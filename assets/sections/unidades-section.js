@@ -6,9 +6,9 @@ export class UnidadesSection extends LitElement {
     section,
     css`
       :host {
-        height:fit-content;
+        height: fit-content;
         gap: 32px;
-        padding-bottom: 4rem;
+        padding: 0 0 4rem 0;
       }
 
       app-paragrafo {
@@ -30,7 +30,23 @@ export class UnidadesSection extends LitElement {
         top: -56px;
       }
 
-      @media (min-width: 768px){
+      swiper-container {
+        width: 100%;
+        height: 300px;
+      }
+
+      swiper-slide {
+        padding-top: 1rem;
+        display: flex;
+        justify-content: center;
+        transition: transform 500ms;
+      }
+
+      .swiper-slide-active {
+        transform: scale(1.1);
+      }
+
+      @media (min-width: 768px) {
         app-paragrafo {
           width: 100%;
           max-width: 500px;
@@ -42,7 +58,6 @@ export class UnidadesSection extends LitElement {
           height: 300px;
         }
       }
-
     `,
   ];
 
@@ -50,12 +65,25 @@ export class UnidadesSection extends LitElement {
     return html`
       <app-paragrafo>
         Nossa sede, localizada na zona leste de São Paulo, e as demais unidades,
-        estão abertas todos os dias.<br/>
-        <br/>
+        estão abertas todos os dias.<br />
+        <br />
         Confira os horários específicos de cada unidade.
       </app-paragrafo>
 
-      <app-mapa></app-mapa>
+      <swiper-container space-between="-60">
+        <swiper-slide>
+          <app-mapa></app-mapa>
+        </swiper-slide>
+        <swiper-slide>
+          <app-mapa></app-mapa>
+        </swiper-slide>
+        <swiper-slide>
+          <app-mapa></app-mapa>
+        </swiper-slide>
+        <swiper-slide>
+          <app-mapa></app-mapa>
+        </swiper-slide>
+      </swiper-container>
 
       <app-bolinhas formato="metade"></app-bolinhas>
     `;
