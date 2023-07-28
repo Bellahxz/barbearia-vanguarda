@@ -22,17 +22,21 @@ export class UnidadesSection extends LitElement {
         transform: rotate(90deg);
         align-items: flex-start;
         --cor-bolinhas: var(--tom-3);
-        z-index: -10;
 
         /*Posicionamento*/
         position: absolute;
         left: -64px;
         top: -56px;
+        z-index: -10;
       }
 
       swiper-container {
-        width: 100%;
+        width: 100svw;
         height: 300px;
+
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
       }
 
       swiper-slide {
@@ -57,9 +61,40 @@ export class UnidadesSection extends LitElement {
           width: 400px;
           height: 300px;
         }
+
+        swiper-container {
+          height: 340px;
+        }
       }
     `,
   ];
+
+  firstUpdated() {
+    const swiper = this.renderRoot.querySelector('swiper-container')
+    
+    console.log(swiper)
+
+    Object.assign(swiper, {
+      spaceBetween: -65,
+      initialSlide: 1,
+      rewind: true,
+      breakpoints: {
+        768: {
+          spaceBetween: -275
+        },
+        1024: {
+          spaceBetween: -575
+        },
+        1368: {
+          centeredSlide: true,
+          spaceBetween: 0,
+          slidesPerView: 3
+        },
+      }
+    })
+
+    swiper.initialize()
+  }
 
   render() {
     return html`
@@ -70,18 +105,42 @@ export class UnidadesSection extends LitElement {
         Confira os horários específicos de cada unidade.
       </app-paragrafo>
 
-      <swiper-container space-between="-60">
+      <swiper-container init="false">
         <swiper-slide>
-          <app-mapa></app-mapa>
+          <app-mapa>
+            <img
+              slot="imagem"
+              loading="lazy"
+              src="mapa-1.png"
+              alt="Imagem mapa a Barbearia Vanguarda 1"
+          /></app-mapa>
         </swiper-slide>
         <swiper-slide>
-          <app-mapa></app-mapa>
+          <app-mapa>
+            <img
+              slot="imagem"
+              loading="lazy"
+              src="mapa-2.jpg"
+              alt="Imagem mapa a Barbearia Vanguarda 2"
+          /></app-mapa>
         </swiper-slide>
         <swiper-slide>
-          <app-mapa></app-mapa>
+          <app-mapa>
+            <img
+              slot="imagem"
+              loading="lazy"
+              src="mapa-3.jpg"
+              alt="Imagem mapa a Barbearia Vanguarda 3"
+          /></app-mapa>
         </swiper-slide>
         <swiper-slide>
-          <app-mapa></app-mapa>
+          <app-mapa>
+            <img
+              slot="imagem"
+              loading="lazy"
+              src="mapa-4.jpg"
+              alt="Imagem mapa a Barbearia Vanguarda 4"
+          /></app-mapa>
         </swiper-slide>
       </swiper-container>
 
