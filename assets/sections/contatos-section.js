@@ -69,7 +69,7 @@ export class ContatosSection extends LitElement {
       <app-titulo>Entre em contato conosco</app-titulo>
 
       <app-quadro>
-        <video src="video-contato.webm" autoplay muted loop></video>
+        <video data-src="video-contato.webm" poster="thumb-contato.webp" autoplay muted loop></video>
       </app-quadro>
 
       <div>
