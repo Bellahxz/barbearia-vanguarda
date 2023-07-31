@@ -1,24 +1,20 @@
 import { Router } from "@vaadin/router";
 import "./assets";
 import { initRouter } from "./assets/router";
+import { animarScrollNavbar } from "./modules/animarScrollNavbar";
+import { lazyLoadVideo } from "./modules/lazyLoadVideo";
+import { observarAnimacoes } from "./modules/observarAnimacoes";
 
-let navbar;
+export let navbar;
 let dialog;
 let router;
 
 document.addEventListener("DOMContentLoaded", function () {
   router = initRouter();
+
   router.ready.then(() => {
-    const video = document
-      .querySelector("home-page")
-      .shadowRoot.querySelector("contatos-section")
-      .shadowRoot.querySelector("video");
-
-      console.log(video)
-
-    const observer = lozad(video);
-
-    observer.observe();
+    lazyLoadVideo()
+    observarAnimacoes()
   });
 
   navbar = document.querySelector("app-navbar");
@@ -52,15 +48,7 @@ export const nav = {
 };
 
 /* Navbar dinâmica ao scroll */
-let prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-  let currentScrollPos = window.pageYOffset;
 
-  if (prevScrollpos > currentScrollPos) {
-    navbar.classList.remove("escondido");
-  } else {
-    navbar.classList.add("escondido");
-  }
 
-  prevScrollpos = currentScrollPos;
-};
+//Janela . ao rolar= animarScrollNavbar
+window.onscroll = animarScrollNavbar

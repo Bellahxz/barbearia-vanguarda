@@ -98,7 +98,7 @@ export class UnidadesSection extends LitElement {
 
   render() {
     return html`
-      <app-paragrafo>
+      <app-paragrafo class="animated__animate animate__delay-1s" data-toggle-class="animate__fadeIn">
         Nossa sede, localizada na zona leste de São Paulo, e as demais unidades,
         estão abertas todos os dias.<br />
         <br />
